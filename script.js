@@ -30,7 +30,7 @@ async function scrapeWithRetry(keyword) {
     while (retries < maxRetries) {
         try {
             // Fetch data from the scraping API endpoint
-            const response = await fetch(`http://127.0.0.1:3000/api/scrape?keyword=${encodeURIComponent(keyword)}`);
+            const response = await fetch(`http://127.0.0.1:8080/api/scrape?keyword=${encodeURIComponent(keyword)}`);
             // Parse the response data as JSON
             const data = await response.json();
             // Return the retrieved data
